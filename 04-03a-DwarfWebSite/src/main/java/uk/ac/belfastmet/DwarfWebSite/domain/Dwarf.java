@@ -11,13 +11,15 @@ public class Dwarf {
 		super();
 	}
 	
-	//getters and setters
+	
 	public Dwarf(String name, String author, String image) {
 		super();
 		this.name = name;
 		this.author = author;
 		this.image = image;
 	}
+	
+	//getters and setters
 	public String getName() {
 		return name;
 	}
