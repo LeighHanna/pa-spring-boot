@@ -20,13 +20,54 @@ public class AnimalController {
 	
 	Logger logger = LoggerFactory.getLogger(AnimalController.class);
 	
+	/**
+	 * This method is what happens for the default webpage
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value="", method = RequestMethod.GET)
 	public String homepage(Model model) {
-		logger.info("Here homepage");
+		logger.info("Home");
 		model.addAttribute("pageTitle", "HomePageAnimals");
 		model.addAttribute("numberOfAnimals", "Top 10 fastest animals");
 		AnimalService animalService = new AnimalService();
 		model.addAttribute("animals", animalService.getAnimals());
+		
+		
+		return "index";
+	}
+	
+	@RequestMapping(value="/fish", method = RequestMethod.GET)
+	public String fishpage(Model model) {
+		logger.info("Fish");
+		model.addAttribute("pageTitle", "HomePageAnimals");
+		model.addAttribute("numberOfAnimals", "Top 2 fastest fish");
+		AnimalService animalService = new AnimalService();
+		model.addAttribute("animals", animalService.getAnimalsFish());
+		
+		
+		return "index";
+	}
+	
+	@RequestMapping(value="/bird", method = RequestMethod.GET)
+	public String birdpage(Model model) {
+		logger.info("Bird");
+		model.addAttribute("pageTitle", "HomePageAnimals");
+		model.addAttribute("numberOfAnimals", "Top 5 fastest birds");
+		AnimalService animalService = new AnimalService();
+		model.addAttribute("animals", animalService.getAnimalsBirds());
+		
+		
+		return "index";
+	}
+	
+	@RequestMapping(value="/mammal", method = RequestMethod.GET)
+	public String mammalpage(Model model) {
+		logger.info("Mammal");
+		model.addAttribute("pageTitle", "HomePageAnimals");
+		model.addAttribute("numberOfAnimals", "Top 3 fastest mammals");
+		AnimalService animalService = new AnimalService();
+		model.addAttribute("animals", animalService.getAnimalsMammals());
 		
 		
 		return "index";

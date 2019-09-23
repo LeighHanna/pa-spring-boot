@@ -30,4 +30,49 @@ public class AnimalService {
 		 
 		 return this.animals;
 	}
+	
+	public ArrayList<Animal> getAnimalsBirds()
+	{
+		 getAnimals();
+		 ArrayList<Animal> animalsNew = new ArrayList<Animal>();
+		 for(Animal animal : animals)
+		 {
+			 if(animal.getType() == "Bird")
+			 {
+				 animalsNew.add(animal);
+			 }
+		 }
+		 
+		 return animalsNew;
+	}
+	
+	public ArrayList<Animal> getAnimalsMammals()
+	{
+		 getAnimals();
+		 ArrayList<Animal> animalsNew = new ArrayList<Animal>();
+		 for(Animal animal : animals)
+		 {
+			 if(animal.getType() == "Mammal")
+			 {
+				 animalsNew.add(animal);
+			 }
+		 }
+		 
+		 return animalsNew;
+	}
+	
+	public ArrayList<Animal> getAnimalsFish()
+	{
+		 getAnimals();
+		 ArrayList<Animal> animalsNew = new ArrayList<Animal>();
+		 for(Animal animal : animals)
+		 {
+			 if(animal.getType() == "Fish")
+			 {
+				 animalsNew.add(animal);
+			 }
+		 }
+		 
+		 return animalsNew;
+	}
 }

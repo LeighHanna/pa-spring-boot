@@ -22,21 +22,20 @@
       <a class="nav-link" href="/">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/fish">Fish</a>
+      <a class="nav-link" href="/">N/A</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/bird">Bird</a>
-    </li>
+      <a class="nav-link" href="/">N/A</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/mammal">Mammal</a>
+      <a class="nav-link" href="/">N/A</a>
     </li>
   </ul>
 </nav>
 <div class="jumbotron text-center">
 
 <h1>This page is about</h1>
-<h2 th:text="${numberOfAnimals}"></h2>
+<h2 th:text="${taskpgDescription}"></h2>
 <br />
 
 </div>
@@ -46,19 +45,25 @@
 <p>
  <table class="table table-hover">
 	<thead class="thead-light">
+	<!-- Populating table headings based on constructor of Task class -->
 		<tr > 
-			<th>Name</th>
-			<th>Type</th>
-			<th>Speed</th>
-			<th>Picture</th>
+			<th>Task</th>
+			<th>Description</th>
+			<th>Deadline</th>
+			<th>Complete</th>
+			<th>AssignedPerson</th>
+			<th>Priority</th>
 		</tr>
 	</thead>
 	<tbody >
-		<tr th:each="animal : ${animals}"> 
-			<td class="tableT10" th:Text="${animal.name}">Cheeta</td>
-			<td class="tableT10" th:Text="${animal.type}">cat</td>
-			<td class="tableT10" th:Text="${animal.speed}">75 mph</td>
-			<td class="tableT10"><img height="150px" width="250px" src="../static/img/Cheeta.png" th:src="@{/img/} + ${animal.image}"></img> </td>
+	<!-- Populating table content based on TaskService -->
+		<tr th:each="task : ${tasks}"> 
+			<td th:Text="${task.name}">Task1</td>
+			<td th:Text="${task.description}">Task1</td>
+			<td th:Text="${task.deadline}">Task1</td>
+			<td th:Text="${task.complete}">Task1</td>
+			<td th:Text="${task.assignedPerson}">Task1</td>
+			<td th:Text="${task.priority}">Task1</td>
 		</tr>
 		
 	</tbody>
