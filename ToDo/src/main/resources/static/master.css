@@ -9,7 +9,6 @@ input {
     width: 60%;
     border:solid #F7D420 1px;
     background-color: #F9E89E;
-
 }
 
 input:-webkit-autofill {

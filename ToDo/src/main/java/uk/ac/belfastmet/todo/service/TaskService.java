@@ -13,10 +13,8 @@ import uk.ac.belfastmet.todo.domain.Task;
 public class TaskService {
 	private ArrayList<Task> tasks;
 	Logger logger = LoggerFactory.getLogger(TaskController.class);
-	/**
-	 * method to create and receive a array list of tasks and their data for tables
-	 * @return
-	 */
+	
+	// method to create and receive a array list of tasks and their data for tables
 	public ArrayList<Task> getTasks()
 	{
 		
@@ -40,10 +38,7 @@ public class TaskService {
 		 return this.tasks;
 	}
 	
-	/**
-	 * method to create and receive a array list of tasks and their data for tables only completed
-	 * @return
-	 */
+	//method to create and receive a array list of tasks and their data for tables only completed 
 	public ArrayList<Task> getTasksCompleted()
 	{
 		 ArrayList<Task> tasksNew = new ArrayList<Task>();
@@ -64,10 +59,8 @@ public class TaskService {
 		 return tasksNew;
 	}
 	
-	/**
-	 * method to create and receive a array list of tasks and their data for tables only non completed
-	 * @return
-	 */
+	
+	//method to create and receive a array list of tasks and their data for tables only non completed
 	public ArrayList<Task> getTasksToDo()
 	{
 		 ArrayList<Task> tasksNew = new ArrayList<Task>();

@@ -18,7 +18,7 @@ public class TaskController {
 	/**
 	 * This method is what happens for the default webpage
 	 * @param model
-	 * @return
+	 * @return HTML page index
 	 */
 	@RequestMapping(value="", method = RequestMethod.GET)
 	public String homepage(Model model) {
@@ -37,7 +37,7 @@ public class TaskController {
 	/**
 	 * This method is what happens for the completed webpage
 	 * @param model
-	 * @return
+	 * @return HTML page completed
 	 */
 	@RequestMapping(value="/completed", method = RequestMethod.GET)
 	public String completed(Model model) {
@@ -57,7 +57,7 @@ public class TaskController {
 	/**
 	 * This method is what happens for the todo webpage
 	 * @param model
-	 * @return
+	 * @return HTML page todo
 	 */
 	@RequestMapping(value="/todo", method = RequestMethod.GET)
 	public String todo(Model model) {
@@ -77,7 +77,7 @@ public class TaskController {
 	/**
 	 * This method is what happens for the alltasks webpage
 	 * @param model
-	 * @return
+	 * @return HTML page alltasks
 	 */
 	@RequestMapping(value="/alltasks", method = RequestMethod.GET)
 	public String alltasks(Model model) {

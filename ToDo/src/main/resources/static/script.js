@@ -1,3 +1,4 @@
+//function to show user successful inputed the correct name and password
 function loginEvent() {
 		  try{
 			  
@@ -11,7 +12,8 @@ function loginEvent() {
 			  alert("ERROR");
 		  }
 		}
-	
-	function placeholder() {
-		alert("Placeholder feature try later");
-		}
+
+//function to display message explaining my its not helping with password
+function placeholder() {
+	alert("Placeholder feature try later");
+	}
