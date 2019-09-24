@@ -2,21 +2,24 @@ package uk.ac.belfastmet.todo.service;
 
 import java.util.ArrayList;
 
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import uk.ac.belfastmet.todo.controller.TaskController;
 import uk.ac.belfastmet.todo.domain.Task;
 
 @Service
 public class TaskService {
 	private ArrayList<Task> tasks;
-	
+	Logger logger = LoggerFactory.getLogger(TaskController.class);
 	/**
 	 * method to create and receive a array list of tasks and their data for tables
 	 * @return
 	 */
 	public ArrayList<Task> getTasks()
 	{
+		
 		 this.tasks = new ArrayList<Task>();
 		 
 		 //creating and adding all tasks
@@ -24,7 +27,7 @@ public class TaskService {
 		 this.tasks.add(new Task("MTA test", "go to titanic at 17:20", "29/09/2019", false, "Leigh Hanna", "high"));
 		 this.tasks.add(new Task("Go shopping", "Go to asda get milk and bread", "19/09/2019", true, "Leigh Hanna", "low"));
 		 this.tasks.add(new Task("Visit bob", "good old bob", "24/10/2019", false, "Leigh Hanna", "low"));
-		 this.tasks.add(new Task("Visit bob", "Gain revenge on bob", "25/10/2019", false, "Leigh Hanna", "Medium"));
+		 this.tasks.add(new Task("Visit bob", "Gain revenge on bob", "25/10/2019", false, "Not Leigh Hanna", "Medium"));
 		 this.tasks.add(new Task("hide bob", "bury the evidence", "26/10/2019", false, "Not Leigh Hanna", "High"));
 		 this.tasks.add(new Task("meet friends", "establish the alibi", "26/10/2019", false, "Not Leigh Hanna", "High"));
 		 this.tasks.add(new Task("study java", "make a list program", "27/10/2019", false, "Leigh Hanna", "low"));
@@ -32,6 +35,8 @@ public class TaskService {
 		 this.tasks.add(new Task("Go to jail", "they caught me", "01/11/2019", false, "Leigh Hanna", "High"));
 		 
 		 //returning the populated list
+		 logger.info("List populated - getTasks()");
+		 logger.debug(tasks.size() + " :tasks in ArrayList tasks");
 		 return this.tasks;
 	}
 	
@@ -54,6 +59,8 @@ public class TaskService {
 		 }
 		 
 		 //returning the populated list
+		 logger.info("List populated - getTasksCompleted()");
+		 logger.debug(tasks.size() + " :tasks in ArrayList tasks");
 		 return tasksNew;
 	}
 	
@@ -80,6 +87,8 @@ public class TaskService {
 		 }
 		 
 		 //returning the populated list
+		 logger.info("List populated - getTasksToDo()");
+		 logger.debug(tasks.size() + " :tasks in ArrayList tasks");
 		 return tasksNew;
 	}
 }

@@ -10,32 +10,34 @@
 	
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-	<!-- Custom Styles  -->
-	<link rel="stylesheet" href="css/master.css" />
+	<!-- Custom Styles and script  -->
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="master.css" />
+	
 <title th:text="${pageTitle}">index</title>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<nav class="navbar navbar-expand-sm  navbar-dark ">
   <ul class="navbar-nav">
   <!-- Links to pages -->
     <li class="nav-item active">
-      <a class="nav-link" href="/">Home</a>
+      <a id="navMaster" class="nav-link" href="/">Home</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link" href="/completed">Completed</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link" href="/todo">ToDo</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link" href="/alltasks">All Tasks</a>
     </li>
   </ul>
 </nav>
 <div class="jumbotron text-center">
 
-<h1>This page is about</h1>
+<h1>@@stickynote@@</h1>
 <h2 th:text="${taskpgDescription}"></h2>
 <br />
 
@@ -45,7 +47,7 @@
 
 <p>
  <table class="table table-hover">
-	<thead class="thead-light">
+	<thead id="tHeadAlt">
 	<!-- Populating table headings based on constructor of Task class -->
 		<tr > 
 			<th>Task</th>
@@ -69,7 +71,7 @@
 		
 	</tbody>
 </table>
-</div> 
+</div>
 
 </body>
 </html>

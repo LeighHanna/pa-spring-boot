@@ -10,66 +10,58 @@
 	
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-	<!-- Custom Styles  -->
-	<link rel="stylesheet" href="css/master.css" />
+	<!-- Custom Styles and script  -->
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="master.css" />
+	
 <title th:text="${pageTitle}">index</title>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<nav class="navbar navbar-expand-sm  navbar-dark ">
   <ul class="navbar-nav">
   <!-- Links to pages -->
     <li class="nav-item active">
-      <a class="nav-link" href="/">Home</a>
+      <a id="navMaster" class="nav-link" href="/">Home</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link" href="/completed">Completed</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link" href="/todo">ToDo</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item active">
       <a class="nav-link" href="/alltasks">All Tasks</a>
     </li>
   </ul>
 </nav>
 <div class="jumbotron text-center">
 
-<h1>This page is about</h1>
+<h1></h1>
 <h2 th:text="${taskpgDescription}"></h2>
 <br />
 
 </div>
 
-<div class="container">
+<div class="container" align="center">
 
-<p>
- <table class="table table-hover">
-	<thead class="thead-light">
-	<!-- Populating table headings based on constructor of Task class -->
-		<tr > 
-			<th>Task</th>
-			<th>Description</th>
-			<th>Deadline</th>
-			<th>Complete</th>
-			<th>AssignedPerson</th>
-			<th>Priority</th>
-		</tr>
-	</thead>
-	<tbody >
-	<!-- Populating table content based on TaskService -->
-		<tr th:each="task : ${tasks}"> 
-			<td th:Text="${task.name}">Task1</td>
-			<td th:Text="${task.description}">Task1</td>
-			<td th:Text="${task.deadline}">Task1</td>
-			<td th:Text="${task.complete}">Task1</td>
-			<td th:Text="${task.assignedPerson}">Task1</td>
-			<td th:Text="${task.priority}">Task1</td>
-		</tr>
-		
-	</tbody>
-</table>
+
+    <!-- Login Form -->
+    <form>
+      <P>Username</P>
+      <input type="text" id="username" name="username">
+      <P></P>
+      <P>Password</P>
+      <input type="password" id="password"  name="password">
+      <P></P>
+      <input type="submit" id="login" onclick="loginEvent()" value="Log In">
+    </form>
+
+    <!-- Remind Password -->
+    <div id="formFooter">
+      <a class="underlineHover"  href="#" onclick="placeholder()">Forgot Password?</a>
+    </div>
 </div> 
-
 </body>
+
 </html>

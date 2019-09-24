@@ -12,7 +12,7 @@ import uk.ac.belfastmet.todo.service.TaskService;
 @Controller
 @RequestMapping
 public class TaskController {
-	
+	String wMessage = "Welcome to @@stickynote@@ Please Login";
 	Logger logger = LoggerFactory.getLogger(TaskController.class);
 	
 	/**
@@ -25,11 +25,10 @@ public class TaskController {
 		//text assignment for page
 		logger.info("Homepage loaded");
 		model.addAttribute("pageTitle", "Task Home Page");
-		model.addAttribute("taskpgDescription", "A complete list of tasks");
+		model.addAttribute("taskpgDescription", wMessage);
 		//getting task info for table population
-		TaskService taskService = new TaskService();
-		model.addAttribute("tasks", taskService.getTasks());
-		logger.info("Tasks method run");
+		
+		logger.info("");
 		
 		
 		return "index";
@@ -52,7 +51,7 @@ public class TaskController {
 		logger.info("Tasks completed method run");
 		
 		
-		return "index";
+		return "completed";
 	}
 	
 	/**
@@ -63,7 +62,7 @@ public class TaskController {
 	@RequestMapping(value="/todo", method = RequestMethod.GET)
 	public String todo(Model model) {
 		//text assignment for page
-		logger.info("completedPage loaded");
+		logger.info("todoPage loaded");
 		model.addAttribute("pageTitle", "ToDo Page");
 		model.addAttribute("taskpgDescription", "A complete list of tasks still todo");
 		//getting task info for table population
@@ -72,7 +71,7 @@ public class TaskController {
 		logger.info("Tasks todo method run");
 		
 		
-		return "index";
+		return "todo";
 	}
 	
 	/**
@@ -83,7 +82,7 @@ public class TaskController {
 	@RequestMapping(value="/alltasks", method = RequestMethod.GET)
 	public String alltasks(Model model) {
 		//text assignment for page
-		logger.info("completedPage loaded");
+		logger.info("alltasksPage loaded");
 		model.addAttribute("pageTitle", "All Tasks Page");
 		model.addAttribute("taskpgDescription", "A complete list of tasks");
 		//getting task info for table population
@@ -92,6 +91,6 @@ public class TaskController {
 		logger.info("Tasks todo method run");
 		
 		
-		return "index";
+		return "alltasks";
 	}
 }

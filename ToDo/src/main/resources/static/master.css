@@ -1,0 +1,58 @@
+
+form {
+  border:solid #F7D420 1px;
+  padding: 2px;
+}
+
+input {
+    display: block;
+    width: 60%;
+    border:solid #F7D420 1px;
+    background-color: #F9E89E;
+
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px #F9E89E inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: #333;
+}
+
+#login {
+	background-color: #F9C73F;
+}
+
+#formFooter{
+	border:solid #F7D420 1px;
+	color: black;
+}
+body {
+	background-color: #FFFDD7;
+	
+}
+
+.navbar {
+	background-color: #F9C73F;
+	border:solid #F7D420 1px;
+}
+
+.navbar-nav {
+	
+	background-color: #F9C73F;
+}
+
+.jumbotron {
+	background-color: #F9E89E;
+	border:solid #F7D420 1px;
+}
+
+#tHeadAlt{
+	background-color: #F9C73F;
+}
+
+.underlineHover{
+	color: black;
+}
+
+.underlineHover:hover{
+	color: #F9C73F;
+}
