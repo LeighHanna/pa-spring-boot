@@ -2,6 +2,7 @@ package uk.ac.belfastmet.todo.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,9 @@ public class TaskController {
 	String wMessage = "Welcome to @@stickynote@@ Please Login";
 	Logger logger = LoggerFactory.getLogger(TaskController.class);
 	
-	/**
+	@Autowired
+	TaskService taskService;
+		/**
 	 * This method is what happens for the default webpage
 	 * @param model
 	 * @return HTML page index
@@ -46,7 +49,6 @@ public class TaskController {
 		model.addAttribute("pageTitle", "Completed Page");
 		model.addAttribute("taskpgDescription", "A complete list of completed tasks");
 		//getting task info for table population
-		TaskService taskService = new TaskService();
 		model.addAttribute("tasks", taskService.getTasksCompleted());
 		logger.info("Tasks completed method run");
 		
@@ -66,7 +68,6 @@ public class TaskController {
 		model.addAttribute("pageTitle", "ToDo Page");
 		model.addAttribute("taskpgDescription", "A complete list of tasks still todo");
 		//getting task info for table population
-		TaskService taskService = new TaskService();
 		model.addAttribute("tasks", taskService.getTasksToDo());
 		logger.info("Tasks todo method run");
 		
@@ -86,7 +87,7 @@ public class TaskController {
 		model.addAttribute("pageTitle", "All Tasks Page");
 		model.addAttribute("taskpgDescription", "A complete list of tasks");
 		//getting task info for table population
-		TaskService taskService = new TaskService();
+		taskService.getTasks();
 		model.addAttribute("tasks", taskService.getTasks());
 		logger.info("Tasks todo method run");
 		

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import uk.ac.belfastmet.todo.domain.Task;
 
 @Repository
-public interface taskRepository extends CrudRepository<Task, Long>{
+public interface TaskRepository extends CrudRepository<Task, Long>{
 
 }

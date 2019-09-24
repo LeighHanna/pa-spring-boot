@@ -17,12 +17,17 @@ public class Task {
 	String name;
 	String description;
 	String deadline;
-	boolean complete;
+	String complete;
 	String assignedPerson;
 	String priority;
 	
 	//constructor
-	public Task(String name, String description, String deadline, boolean complete, String assignedPerson, String priority) {
+	public Task()
+	{
+		super();
+		
+	}
+	public Task(String name, String description, String deadline, String complete, String assignedPerson, String priority) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -72,11 +77,11 @@ public class Task {
 	}
 
 	@Column(name = "complete")
-	public boolean isComplete() {
+	public String getComplete() {
 		return complete;
 	}
 
-	public void setComplete(boolean complete) {
+	public void setComplete(String complete) {
 		this.complete = complete;
 	}
 
@@ -102,8 +107,4 @@ public class Task {
 	public String toString() {
 		return ("name:" + name + ", deadline:" + deadline+ ", complete:" + complete + ", assignedPerson:" + assignedPerson + ", priority:" + priority);
 	}
-	
-	
-	
-
 }
