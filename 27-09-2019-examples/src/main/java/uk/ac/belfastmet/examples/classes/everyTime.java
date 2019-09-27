@@ -15,6 +15,12 @@ public class everyTime {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param data the string you are getting data from
+	 * @param spot e.g every two characters
+	 * @return newData a string with the characters you requeded through spot from data
+	 */
 	public String everyNth(String data, int spot)
 	{
 		String newData = "";
