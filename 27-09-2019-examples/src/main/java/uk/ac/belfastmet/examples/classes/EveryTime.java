@@ -1,10 +1,10 @@
 package uk.ac.belfastmet.examples.classes;
 
-public class everyTime {
+public class EveryTime {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		everyTime eTime = new everyTime();
+		EveryTime eTime = new EveryTime();
 		System.out.println(eTime.everyNth("Miracle", 2)); //Mrce expected
 		System.out.println(eTime.everyNth("abcdefg", 2)); //aceg expected
 		System.out.println(eTime.everyNth("abcdefg", 3)); //adg expected

@@ -1,13 +1,13 @@
 package uk.ac.belfastmet.examples.classes;
 
-public class temperature {
+public class Temperature {
 	int numTrue = 0;
 	int numFalse = 0;
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		temperature temp = new temperature();
+		Temperature temp = new Temperature();
 		System.out.println(temp.icyHot(-1, 101)); //True expected
 		System.out.println(temp.icyHot(101, -1)); //True expected
 		System.out.println(temp.icyHot(0, 101)); //False expected
@@ -23,6 +23,12 @@ public class temperature {
 		
 	}
 	
+	/**
+	 * method to confirm a value is greater than 100 and a second value is less than 0
+	 * @param val1
+	 * @param val2
+	 * @return true or false
+	 */
 	public boolean icyHot(int val1, int val2) {
 		boolean index = false;
 		if( (val1 < 0 && val2 > 100) || ( val2 < 0 && val1 > 100))

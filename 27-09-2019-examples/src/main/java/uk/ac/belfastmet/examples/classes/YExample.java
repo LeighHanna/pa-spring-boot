@@ -11,6 +11,12 @@ public class YExample {
 		System.out.println(myExample.sleepIn(false,true));
 	}
 	
+	/**
+	 * method to dictate if you can or will sleep in
+	 * @param weekday
+	 * @param vacation
+	 * @return true or false
+	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
 		boolean sleepIn = false;
 		 if(vacation == true) {

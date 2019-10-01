@@ -22,7 +22,11 @@ public class challenge1 {
 		System.out.println("-----------------------------");
 		
 	}
-;
+
+	/**
+	 * a method to populate an array list
+	 * @return the new array list
+	 */
 	public ArrayList<String> createArray(){
 		ArrayList<String> index = new ArrayList<String>();
 		index.add("Elephant");
@@ -32,6 +36,11 @@ public class challenge1 {
 		return index;
 	}
 	
+	/**
+	 * method to add two specific inputs to an arraylist given
+	 * @param index
+	 * @return the new array list
+	 */
 	public ArrayList<String> addToArray(ArrayList<String> index){
 		index.add("Dog");
 		index.add("Cat");
@@ -39,12 +48,22 @@ public class challenge1 {
 		return index;
 	}
 	
+	/**
+	 * method to remove elephant from the arraylist
+	 * @param index
+	 * @return  the new array list
+	 */
 	public ArrayList<String> removeArrayElephant(ArrayList<String> index){
 		index.remove("Elephant");
 		System.out.println("-Elephant has been remove from the array-");	
 		return index;
 	}
 	
+	/**
+	 * method to clear the arraylist
+	 * @param index
+	 * @return  the new array list
+	 */
 	public ArrayList<String> removeArrayAll(ArrayList<String> index){
 		index.clear();
 		System.out.println("-Array has been emptyed-");	

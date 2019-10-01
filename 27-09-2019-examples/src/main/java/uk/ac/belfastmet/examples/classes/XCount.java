@@ -17,6 +17,11 @@ public class XCount {
 		
 	}
 	
+	/**
+	 *method to count the number of letter x in the string given
+	 * @param data
+	 * @return number of character x as an int
+	 */
 	public int countXX(String data) {
 		int index = 0;
 		

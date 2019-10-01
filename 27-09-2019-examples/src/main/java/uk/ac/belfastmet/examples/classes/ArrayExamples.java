@@ -7,13 +7,16 @@ public class ArrayExamples {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayExamples myExample = new ArrayExamples();
-		myExample.addSringToArryaList();
+		myExample.addSringToArrayList();
 		System.out.println("-----------------------------");
 		myExample.containsString();
 		System.out.println("-----------------------------");
 	}
 	
-	public void addSringToArryaList() {
+	/**
+	 * method to add to an array list and display success
+	 */
+	public void addSringToArrayList() {
 		ArrayList<String> listOfStuff = new ArrayList<String>();
 		listOfStuff.add("Good");
 		listOfStuff.add("Morning");
@@ -24,6 +27,9 @@ public class ArrayExamples {
 		}
 	}
 	
+	/**
+	 * method to display if a sting contains a certain word
+	 */
 	public void containsString() {
 		ArrayList<String> listOfStuff = new ArrayList<String>();
 		listOfStuff.add("Good");
