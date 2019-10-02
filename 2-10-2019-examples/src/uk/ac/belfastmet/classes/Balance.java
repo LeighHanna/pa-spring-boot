@@ -16,11 +16,11 @@ public class Balance {
 			//an if statement to ensure i can check one to the right of the current character
 			if(index < (value.length()-1)) {
 				if(value.charAt(index) == '{' ) {
-					if(value.charAt((value.length()-1) - index) == '}')
+					if(value.charAt((value.length()-1) - index) == '}') //if statement to check character at the other of the string
 					{
 						
 					}
-					else if(value.charAt(index + 1) == '}')
+					else if(value.charAt(index + 1) == '}') //if statement to check character beside this one
 					{
 						
 					}
@@ -30,11 +30,11 @@ public class Balance {
 					}
 				}
 				else if(value.charAt(index) == '(' ) {
-					if(value.charAt((value.length()-1) - index) == ')')
+					if(value.charAt((value.length()-1) - index) == ')') //if statement to check character at the other of the string
 					{
 						
 					}
-					else if(value.charAt(index + 1) == ')')
+					else if(value.charAt(index + 1) == ')') //if statement to check character beside this one
 					{
 						
 					}
@@ -44,11 +44,11 @@ public class Balance {
 					}
 				}
 				else if(value.charAt(index) == '[' ) {
-					if(value.charAt((value.length()-1) - index) == ']')
+					if(value.charAt((value.length()-1) - index) == ']') //if statement to check character at the other of the string
 					{
 						
 					}
-					else if(value.charAt(index + 1) == ']')
+					else if(value.charAt(index + 1) == ']') //if statement to check character beside this one
 					{
 						
 					}
@@ -65,11 +65,12 @@ public class Balance {
 			//an if statement to ensure i can check one to the left of the current character
 			if(index > 0) {
 				if(value.charAt(index) == '}' ) {
-					if(value.charAt((value.length() - 1) - index) == '{')
+					 
+					if(value.charAt((value.length() - 1) - index) == '{') //if statement to check character at the other of the string
 					{
 						
 					}
-					else if(value.charAt(index - 1) == '{')
+					else if(value.charAt(index - 1) == '{')//if statement to check character beside this one
 					{
 						
 					}
@@ -79,11 +80,11 @@ public class Balance {
 					}
 				}
 				else if(value.charAt(index) == ')' ) {
-					if(value.charAt((value.length() - 1) - index) == '(')
+					if(value.charAt((value.length() - 1) - index) == '(') //if statement to check character at the other of the string
 					{
 						
 					}
-					else if(value.charAt(index - 1) == '(')
+					else if(value.charAt(index - 1) == '(') //if statement to check character beside this one
 					{
 						
 					}
@@ -93,11 +94,11 @@ public class Balance {
 					}
 				}
 				else if(value.charAt(index) == ']' ) {
-					if(value.charAt((value.length() - 1) - index) == '[')
+					if(value.charAt((value.length() - 1) - index) == '[') //if statement to check character at the other of the string
 					{
 						
 					}
-					else if(value.charAt(index - 1) == '[')
+					else if(value.charAt(index - 1) == '[') //if statement to check character beside this one
 					{
 						
 					}
