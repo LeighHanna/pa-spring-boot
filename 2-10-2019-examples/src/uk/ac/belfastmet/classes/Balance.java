@@ -11,8 +11,9 @@ public class Balance {
 		String result = "Balanced";
 		String fail = "Not Balanced";
 
-		
+		//for loop for each character in the string given
 		for(int index=0; index<value.length(); index++) {
+			//an if statement to ensure i can check one to the right of the current character
 			if(index < (value.length()-1)) {
 				if(value.charAt(index) == '{' ) {
 					if(value.charAt((value.length()-1) - index) == '}')
@@ -61,6 +62,7 @@ public class Balance {
 				
 			}
 			
+			//an if statement to ensure i can check one to the left of the current character
 			if(index > 0) {
 				if(value.charAt(index) == '}' ) {
 					if(value.charAt((value.length() - 1) - index) == '{')
