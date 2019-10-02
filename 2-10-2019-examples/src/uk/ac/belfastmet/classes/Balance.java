@@ -13,6 +13,7 @@ public class Balance {
 
 		//for loop for each character in the string given
 		for(int index=0; index<value.length(); index++) {
+			//ALL OPEN BRACKETS
 			//an if statement to ensure i can check one to the right of the current character
 			if(index < (value.length()-1)) {
 				if(value.charAt(index) == '{' ) {
@@ -62,6 +63,7 @@ public class Balance {
 				
 			}
 			
+			//ALL CLOSE BRACKETS
 			//an if statement to ensure i can check one to the left of the current character
 			if(index > 0) {
 				if(value.charAt(index) == '}' ) {
