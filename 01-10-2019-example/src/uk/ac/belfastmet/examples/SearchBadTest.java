@@ -1,11 +1,11 @@
 package uk.ac.belfastmet.examples;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
 class SearchBadTest {
 
+	//Javadoc comments for test methods
 	@Test
 	void testHasBad1() {
 		SearchBad searchBad = new SearchBad();

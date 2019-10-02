@@ -1,11 +1,11 @@
 package uk.ac.belfastmet.examples;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
 class RorBTest {
 
+	//Javadoc comments for test methods
 	@Test
 	void testSeeColor1() {
 		RorB rorb = new RorB();

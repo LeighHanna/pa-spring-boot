@@ -1,5 +1,4 @@
 package uk.ac.belfastmet.examples;
-
 public class SearchBad {
 	
 	/**

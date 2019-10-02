@@ -1,11 +1,11 @@
 package uk.ac.belfastmet.examples;
-
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 public class FrontAndBackTest {
 
+	//Javadoc comments for test methods
 	@Test
 	public void testIsPalindrome1() {
 		FrontAndBack myExample = new FrontAndBack();
