@@ -8,8 +8,8 @@ public class Balance {
 	 * @return "Balanced" or "Not Balanced"
 	 */
 	public static String balanceBrackets(String value) {
-		String result = "Balanced";
-		String fail = "Not Balanced";
+		String result = "Balanced"; //sucess message + the default value
+		String fail = "Not Balanced"; //fail message 
 
 		//for loop for each character in the string given
 		for(int index=0; index<value.length(); index++) {
@@ -20,7 +20,7 @@ public class Balance {
 					{
 						
 					}
-					else if(value.charAt(index + 1) == '}') //if statement to check character beside this one
+					else if(value.charAt(index + 1) == '}') //if statement to check character beside this one to the right
 					{
 						
 					}
@@ -34,7 +34,7 @@ public class Balance {
 					{
 						
 					}
-					else if(value.charAt(index + 1) == ')') //if statement to check character beside this one
+					else if(value.charAt(index + 1) == ')') //if statement to check character beside this one  to the right
 					{
 						
 					}
@@ -44,7 +44,7 @@ public class Balance {
 					}
 				}
 				else if(value.charAt(index) == '[' ) {
-					if(value.charAt((value.length()-1) - index) == ']') //if statement to check character at the other of the string
+					if(value.charAt((value.length()-1) - index) == ']') //if statement to check character at the other of the string  to the right
 					{
 						
 					}
@@ -70,7 +70,7 @@ public class Balance {
 					{
 						
 					}
-					else if(value.charAt(index - 1) == '{')//if statement to check character beside this one
+					else if(value.charAt(index - 1) == '{')//if statement to check character beside this one to the left
 					{
 						
 					}
@@ -84,7 +84,7 @@ public class Balance {
 					{
 						
 					}
-					else if(value.charAt(index - 1) == '(') //if statement to check character beside this one
+					else if(value.charAt(index - 1) == '(') //if statement to check character beside this one to the left
 					{
 						
 					}
@@ -98,7 +98,7 @@ public class Balance {
 					{
 						
 					}
-					else if(value.charAt(index - 1) == '[') //if statement to check character beside this one
+					else if(value.charAt(index - 1) == '[') //if statement to check character beside this one to the left
 					{
 						
 					}
