@@ -6,6 +6,7 @@ public class Balance {
 	 * method to show if brackets open or close either beside each other or  on the other side of the string
 	 * @param value
 	 * @return "Balanced" or "Not Balanced"
+	 * 
 	 */
 	public static String balanceBrackets(String value) {
 		String result = "Balanced"; //sucess message + the default value
